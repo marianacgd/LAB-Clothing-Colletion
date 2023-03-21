@@ -1,0 +1,22 @@
+ <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5 text-center">
+       <img class="mb-4" src="../../../assets/images/AudacesLogo.png" alt="audaces" width="36" height="36">
+        <div class="card border-light" style="border-radius: 8px;">
+          <div class="card-body p-5 text-center">
+                         
+              <ng-content select="[slot='header']"></ng-content>
+
+              <div class="form-outline form-white mb-4">
+               <ng-content select="[slot='body']"></ng-content>
+              </div>
+
+          </div>
+        </div>
+        <div class="mt-4">
+          <ng-content select="[slot='footer']"></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+
