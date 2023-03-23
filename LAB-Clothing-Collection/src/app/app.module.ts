@@ -11,6 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BoxLoginComponent } from './components/box-login/box-login.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
+import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.compo
     MenuComponent,
     HeaderComponent,
     BoxLoginComponent,
-    EsqueciSenhaComponent
+    EsqueciSenhaComponent,
+    CriarContaComponent
   ],
   imports: [
     BrowserModule,
