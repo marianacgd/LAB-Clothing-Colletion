@@ -3,8 +3,15 @@
     <app-box-login>
 
         <div slot="header">
-            <h2 class="fw-bold mb-2">Redefinir Senha</h2>
-            <p class="text-50 mb-5 text-black-50">Digite o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha.</p>
+            <div class="row">
+                <div class="col-1">
+                    <a routerLink="/login"><img src="../../../assets/images/Arrow1.png" alt="voltar"></a>
+                </div>
+                <div class="col-11">            
+                    <h2 class="mb-2 custom-h2">Redefinir Senha</h2>
+                </div>
+                <p class="mb-5 text-black-50">Digite o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha.</p>
+        </div>
         </div>
         <div slot="body">
             <form>
@@ -13,7 +20,7 @@
                     <label for="floatingInput" class="text-black-50">Informe seu e-mail</label>
                 </div>
                
-                <button class="btn btn-lg btn-primary w-100" type="submit">Enviar Recuperação</button>
+                <button class="btn btn-lg w-100 custom-btn" type="submit">Enviar Recuperação</button>
             </form>
         </div>
     
