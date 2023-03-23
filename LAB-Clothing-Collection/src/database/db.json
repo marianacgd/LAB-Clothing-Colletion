@@ -1,0 +1,51 @@
+{
+
+  "colecoes": [
+    {
+      "id": 1,
+      "nomeColecao": "Coleção 1",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": "1000,00",
+      "modelos": [
+        {
+          "id": 1,
+          "nomeModelo": "Modelo 1",
+          "tipo": "Tipo"
+        },
+        {
+          "id": 2,
+          "nomeModelo": "Modelo 2",
+          "tipo": "Tipo"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Coleção 2",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": "1000,00",
+      "modelos": [
+        {
+          "id": 1,
+          "nomeModelo": "Modelo 1",
+          "tipo": "Tipo"
+        },
+        {
+          "id": 2,
+          "nomeModelo": "Modelo 2",
+          "tipo": "Tipo"
+        }
+      ]
+    }
+  ],
+
+    "usuarios": [
+        {           
+          "id": 1,
+          "email": "admin@admin.com",
+          "senha": "admin"
+        }
+    ]
+  }
