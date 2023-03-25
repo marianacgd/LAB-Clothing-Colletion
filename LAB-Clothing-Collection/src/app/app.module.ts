@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { BoxLoginComponent } from './components/box-login/box-login.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuarioService } from './services/usuario.service';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,18 @@ import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
     HeaderComponent,
     BoxLoginComponent,
     EsqueciSenhaComponent,
-    CriarContaComponent
+    CriarContaComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

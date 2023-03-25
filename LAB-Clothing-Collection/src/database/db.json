@@ -1,5 +1,4 @@
 {
-
   "colecoes": [
     {
       "id": 1,
@@ -40,12 +39,27 @@
       ]
     }
   ],
-
-    "usuarios": [
-        {           
-          "id": 1,
-          "email": "admin@admin.com",
-          "senha": "admin"
-        }
-    ]
-  }
+  "usuarios": [
+    {
+      "id": 1,
+      "email": "admin@admin.com",
+      "password": "admin123"
+    },
+    {
+      "nome": "mariana",
+      "empresa": "mari estamparia",
+      "cnpj": "12.123.0001-11",
+      "email": "mariana.daruix@gmail.com",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "nome": "jamil",
+      "empresa": "jamil",
+      "cnpj": "12.9889.932789",
+      "email": "jamilsd@gmail.com",
+      "password": "12345678",
+      "id": 3
+    }
+  ]
+}
