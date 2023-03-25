@@ -16,6 +16,7 @@ import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from './services/usuario.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BoxLoginComponent,
     EsqueciSenhaComponent,
     CriarContaComponent,
-    DashboardComponent
+    DashboardComponent,
+    CardDashboardComponent
   ],
   imports: [
     BrowserModule,
