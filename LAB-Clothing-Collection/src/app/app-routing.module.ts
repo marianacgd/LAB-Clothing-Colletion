@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentComponent } from './layouts/content/content.component';
 import { FullComponent } from './layouts/full/full.component';
+import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ModelosComponent } from './pages/modelos/modelos.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
     path: '', component: FullComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'colecoes', component: ColecoesComponent, canActivate: [AuthGuard] },
+      { path: 'modelos', component: ModelosComponent, canActivate: [AuthGuard] },
     ],
   },
   { path: '**', redirectTo: 'login' },

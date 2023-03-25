@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from './services/usuario.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
+import { ColecoesComponent } from './pages/colecoes/colecoes.component';
+import { ModelosComponent } from './pages/modelos/modelos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CardDashboardComponent } from './components/card-dashboard/card-dashboa
     EsqueciSenhaComponent,
     CriarContaComponent,
     DashboardComponent,
-    CardDashboardComponent
+    CardDashboardComponent,
+    ColecoesComponent,
+    ModelosComponent
   ],
   imports: [
     BrowserModule,
