@@ -2,41 +2,41 @@
     
     <app-box-login>
         <div slot="header">
-            <h2 class="mb-2">Sign Up</h2>
+            <h4 class="mb-2">Sign Up</h4>
             <p class="text-50 mb-4 text-black-50">Insira seus dados para criar uma conta</p>
         </div>
 
         <div slot="body">
-            <form>
+            <form [formGroup]="formCadastro" (ngSubmit)="cadastrarUser()">
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="Nome">
-                    <label for="floatingInput" class="text-black-50">Nome</label>
+                    <input type="text" class="form-control form-control-sm" id="nome" placeholder="Nome" formControlName="nome">
+                    <label for="nome" class="text-black-50">Nome</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="Empresa">
-                    <label for="floatingInput" class="text-black-50">Empresa</label>
+                    <input type="text" class="form-control form-control-sm" id="empresa" placeholder="Empresa" formControlName="empresa">
+                    <label for="empresa" class="text-black-50">Empresa</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-lg" id="floatingInput" placeholder="CNPJ">
-                    <label for="floatingInput" class="text-black-50">CNPJ</label>
+                    <input type="text" class="form-control form-control-lg" id="cnpj" placeholder="CNPJ" formControlName="cnpj">
+                    <label for="cnpj" class="text-black-50">CNPJ</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control form-control-lg" id="floatingInput" placeholder="Email">
-                    <label for="floatingInput" class="text-black-50">Informe seu e-mail</label>
+                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" formControlName="email">
+                    <label for="email" class="text-black-50">Informe seu e-mail</label>
                 </div>
                 
                 <div class="row">
                     <div class="col-6">                
                         <div class="form-floating mb-4">
-                        <input type="password" class="form-control form-control-lg" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword" class="text-black-50">Informe sua senha</label>
+                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Password" formControlName="password">
+                        <label for="password" class="text-black-50">Informe sua senha</label>
                         </div>
                     </div>
 
                     <div class="col-6">                
                         <div class="form-floating mb-4">
-                        <input type="password" class="form-control form-control-lg" id="floatingPassword" placeholder="ConfirmPassword">
-                        <label for="floatingPassword" class="text-black-50">Confirmar senha</label>
+                        <input type="password" class="form-control form-control-lg" id="confirmpassword" placeholder="ConfirmPassword" formControlName="confirmpassword">
+                        <label for="confirmpassword" class="text-black-50">Confirmar senha</label>
                         </div>
                     </div>
                 </div>
