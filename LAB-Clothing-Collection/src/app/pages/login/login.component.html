@@ -7,14 +7,14 @@
             <p class="mb-5 text-black-50">Insira suas credenciais para acessar sua conta</p>
         </div>
         <div slot="body">
-            <form>
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
                 <div class="form-floating mb-4">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Email">
-                    <label for="floatingInput" class="text-black-50">Informe seu e-mail</label>
+                    <input type="email" class="form-control" id="emaillogin" placeholder="Email" formControlName="email">
+                    <label for="emaillogin" class="text-black-50">Informe seu e-mail</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword" class="text-black-50">Informe sua senha</label>
+                    <input type="password" class="form-control" id="passwordlogin" placeholder="Password" formControlName="password">
+                    <label for="passwordlogin" class="text-black-50">Informe sua senha</label>
                 </div>
                 <button class="btn btn-lg btn-primary w-100" type="submit">Entrar</button>
             </form>
