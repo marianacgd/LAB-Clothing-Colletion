@@ -11,7 +11,28 @@
         
         <div class="row align-items-center justify-content-center mt-3">
             <div class="col-12">
-                <app-card-dashboard></app-card-dashboard>
+                <app-card-listagem>
+                    <table slot="tabela" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Coleção</th>
+                                <th>Responsável</th>
+                                <th>Estação - Lançamento</th>
+                                <th>Modelos</th>
+                                <th>Orçamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let colecao of colecoes">
+                                <td>{{colecao.nomeColecao}}</td>
+                                <td>{{colecao.responsavel}}</td>
+                                <td>{{colecao.estacao}} {{colecao.ano}}</td>
+                                <td>{{colecao.modelos}}</td>
+                                <td>R$ {{colecao.orcamento}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </app-card-listagem>
             </div>
           </div>
       </div>
