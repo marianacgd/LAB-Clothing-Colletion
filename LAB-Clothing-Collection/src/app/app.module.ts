@@ -19,6 +19,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
+import { CardListagemComponent } from './components/card-listagem/card-listagem.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ModelosComponent } from './pages/modelos/modelos.component';
     DashboardComponent,
     CardDashboardComponent,
     ColecoesComponent,
-    ModelosComponent
+    ModelosComponent,
+    CardListagemComponent
   ],
   imports: [
     BrowserModule,

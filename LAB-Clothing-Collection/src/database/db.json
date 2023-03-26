@@ -4,90 +4,156 @@
       "id": 1,
       "nomeColecao": "Coleção 1",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 1.10
+      "estacao": "Verão",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 1100.00
     },
     {
       "id": 2,
-      "nome": "Coleção 2",
+      "nomeColecao": "Coleção 2",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 5.00
+      "estacao": "Outono",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 3100.00
     },
     {
       "id": 3,
-      "nome": "Coleção 3",
+      "nomeColecao": "Coleção 3",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 6.00
+      "estacao": "Inverno",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 5000.00
     },
     {
       "id": 4,
-      "nome": "Coleção 4",
+      "nomeColecao": "Coleção 4",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 7.11
+      "estacao": "Inverno",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 7000.00
     },
     {
       "id": 5,
-      "nome": "Coleção 5",
+      "nomeColecao": "Coleção 5",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 9.00
+      "estacao": "Verão",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 3000.00
     },
     {
       "id": 6,
-      "nome": "Coleção 6",
+      "nomeColecao": "Coleção 6",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 4.00
+      "estacao": "Verão",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 2500.00
     },
     {
       "id": 7,
-      "nome": "Coleção 7",
+      "nomeColecao": "Coleção 7",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 3.88
+      "estacao": "Outono",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 3200.00
     },
     {
       "id": 8,
-      "nome": "Coleção 8",
+      "nomeColecao": "Coleção 8",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 11.99
+      "estacao": "Inverno",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 4500.00
     },
     {
       "id": 9,
-      "nome": "Coleção 9",
+      "nomeColecao": "Coleção 9",
       "responsavel": "Responsavel 1",
-      "estacao": "Estação Verão",
-      "orcamento": 1.01
+      "estacao": "Outono",
+      "ano": 2023,
+      "modelos": [],
+      "orcamento": 2800.00
     }
   ],
   "modelos": [
     {
       "id": 1,
-      "idColecao": 1,
       "nomeModelo": "Modelo 1",
-      "tipo": "Tipo"
+      "tipoModelo": "bermuda",
+      "idColecao": 1,
+      "possuiBordado": "não",
+      "possuiEstampa": "sim"      
     },
     {
       "id": 2,
-      "idColecao": 1,
       "nomeModelo": "Modelo 2",
-      "tipo": "Tipo"
+      "tipoModelo": "biquini",
+      "idColecao": 1,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
     },
     {
       "id": 3,
-      "idColecao": 2,
-      "nomeModelo": "Modelo 1",
-      "tipo": "Tipo"
+      "nomeModelo": "Modelo 3",
+      "tipoModelo": "bolsa",
+      "idColecao": 3,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
     },
     {
       "id": 4,
+      "nomeModelo": "Modelo 4",
+      "tipoModelo": "boné",
+      "idColecao": 5,
+      "possuiBordado": "sim",
+      "possuiEstampa": "não"
+    },
+    {
+      "id": 5,
+      "nomeModelo": "Modelo 5",
+      "tipoModelo": "calça",
       "idColecao": 2,
-      "nomeModelo": "Modelo 2",
-      "tipo": "Tipo"
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
+    },
+    {
+      "id": 6,
+      "nomeModelo": "Modelo 6",
+      "tipoModelo": "calçado",
+      "idColecao": 2,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
+    },
+    {
+      "id": 7,
+      "nomeModelo": "Modelo 7",
+      "tipoModelo": "camisa",
+      "idColecao": 3,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
+    },
+    {
+      "id": 8,
+      "nomeModelo": "Modelo 8",
+      "tipoModelo": "chapéu",
+      "idColecao": 3,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
+    },
+    {
+      "id": 9,
+      "nomeModelo": "Modelo 9",
+      "tipoModelo": "saia",
+      "idColecao": 5,
+      "possuiBordado": "não",
+      "possuiEstampa": "não"
     }
   ],
   "usuarios": [
