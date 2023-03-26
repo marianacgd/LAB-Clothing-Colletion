@@ -5,38 +5,89 @@
       "nomeColecao": "Coleção 1",
       "responsavel": "Responsavel 1",
       "estacao": "Estação Verão",
-      "orcamento": "1000,00",
-      "modelos": [
-        {
-          "id": 1,
-          "nomeModelo": "Modelo 1",
-          "tipo": "Tipo"
-        },
-        {
-          "id": 2,
-          "nomeModelo": "Modelo 2",
-          "tipo": "Tipo"
-        }
-      ]
+      "orcamento": 1.10
     },
     {
       "id": 2,
       "nome": "Coleção 2",
       "responsavel": "Responsavel 1",
       "estacao": "Estação Verão",
-      "orcamento": "1000,00",
-      "modelos": [
-        {
-          "id": 1,
-          "nomeModelo": "Modelo 1",
-          "tipo": "Tipo"
-        },
-        {
-          "id": 2,
-          "nomeModelo": "Modelo 2",
-          "tipo": "Tipo"
-        }
-      ]
+      "orcamento": 5.00
+    },
+    {
+      "id": 3,
+      "nome": "Coleção 3",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 6.00
+    },
+    {
+      "id": 4,
+      "nome": "Coleção 4",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 7.11
+    },
+    {
+      "id": 5,
+      "nome": "Coleção 5",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 9.00
+    },
+    {
+      "id": 6,
+      "nome": "Coleção 6",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 4.00
+    },
+    {
+      "id": 7,
+      "nome": "Coleção 7",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 3.88
+    },
+    {
+      "id": 8,
+      "nome": "Coleção 8",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 11.99
+    },
+    {
+      "id": 9,
+      "nome": "Coleção 9",
+      "responsavel": "Responsavel 1",
+      "estacao": "Estação Verão",
+      "orcamento": 1.01
+    }
+  ],
+  "modelos": [
+    {
+      "id": 1,
+      "idColecao": 1,
+      "nomeModelo": "Modelo 1",
+      "tipo": "Tipo"
+    },
+    {
+      "id": 2,
+      "idColecao": 1,
+      "nomeModelo": "Modelo 2",
+      "tipo": "Tipo"
+    },
+    {
+      "id": 3,
+      "idColecao": 2,
+      "nomeModelo": "Modelo 1",
+      "tipo": "Tipo"
+    },
+    {
+      "id": 4,
+      "idColecao": 2,
+      "nomeModelo": "Modelo 2",
+      "tipo": "Tipo"
     }
   ],
   "usuarios": [
