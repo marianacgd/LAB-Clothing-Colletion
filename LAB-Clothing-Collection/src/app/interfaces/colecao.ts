@@ -9,4 +9,5 @@ export interface IColecao {
     ano: number;
     modelos: IModelo[];
     orcamento: number;
+    marca: string;
 }
