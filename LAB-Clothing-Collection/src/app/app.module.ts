@@ -20,6 +20,8 @@ import { CardDashboardComponent } from './components/card-dashboard/card-dashboa
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
 import { CardListagemComponent } from './components/card-listagem/card-listagem.component';
+import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
+import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { CardListagemComponent } from './components/card-listagem/card-listagem.
     CardDashboardComponent,
     ColecoesComponent,
     ModelosComponent,
-    CardListagemComponent
+    CardListagemComponent,
+    CriarColecaoComponent,
+    CriarModeloComponent
   ],
   imports: [
     BrowserModule,

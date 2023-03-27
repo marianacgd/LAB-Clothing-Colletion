@@ -7,7 +7,7 @@
       "estacao": "Verão",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 1100.00
+      "orcamento": 1100
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "estacao": "Outono",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 3100.00
+      "orcamento": 3100
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "estacao": "Inverno",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 5000.00
+      "orcamento": 5000
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "estacao": "Inverno",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 7000.00
+      "orcamento": 7000
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "estacao": "Verão",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 3000.00
+      "orcamento": 3000
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "estacao": "Verão",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 2500.00
+      "orcamento": 2500
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "estacao": "Outono",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 3200.00
+      "orcamento": 3200
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "estacao": "Inverno",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 4500.00
+      "orcamento": 4500
     },
     {
       "id": 9,
@@ -79,7 +79,25 @@
       "estacao": "Outono",
       "ano": 2023,
       "modelos": [],
-      "orcamento": 2800.00
+      "orcamento": 2800
+    },
+    {
+      "nomeColecao": "Coleção 10",
+      "responsavelColecao": "Responsável 2",
+      "estacao": "Outono",
+      "marca": "Minha Marca",
+      "orcamento": 7000,
+      "anoLancamento": 2023,
+      "id": 10
+    },
+    {
+      "nomeColecao": "Coleção 10",
+      "responsavel": "Responsável 2",
+      "estacao": "Outono",
+      "marca": "Minha Marca",
+      "orcamento": 8000,
+      "ano": 2023,
+      "id": 11
     }
   ],
   "modelos": [
@@ -88,14 +106,16 @@
       "nomeModelo": "Modelo 1",
       "tipoModelo": "bermuda",
       "idColecao": 1,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
-      "possuiEstampa": "sim"      
+      "possuiEstampa": "sim"
     },
     {
       "id": 2,
       "nomeModelo": "Modelo 2",
       "tipoModelo": "biquini",
       "idColecao": 1,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -104,6 +124,7 @@
       "nomeModelo": "Modelo 3",
       "tipoModelo": "bolsa",
       "idColecao": 3,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -112,6 +133,7 @@
       "nomeModelo": "Modelo 4",
       "tipoModelo": "boné",
       "idColecao": 5,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "sim",
       "possuiEstampa": "não"
     },
@@ -120,6 +142,7 @@
       "nomeModelo": "Modelo 5",
       "tipoModelo": "calça",
       "idColecao": 2,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -128,6 +151,7 @@
       "nomeModelo": "Modelo 6",
       "tipoModelo": "calçado",
       "idColecao": 2,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -136,6 +160,7 @@
       "nomeModelo": "Modelo 7",
       "tipoModelo": "camisa",
       "idColecao": 3,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -144,6 +169,7 @@
       "nomeModelo": "Modelo 8",
       "tipoModelo": "chapéu",
       "idColecao": 3,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     },
@@ -152,6 +178,7 @@
       "nomeModelo": "Modelo 9",
       "tipoModelo": "saia",
       "idColecao": 5,
+      "responsavel": "Responsavel 1",
       "possuiBordado": "não",
       "possuiEstampa": "não"
     }
