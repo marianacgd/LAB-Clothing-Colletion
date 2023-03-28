@@ -9,19 +9,19 @@
           <div class="col-4">
             <app-card-dashboard>
               <div slot="titulo">Coleções</div>
-              <div slot="valor">25</div>              
+              <div slot="valor" class="fw-bold">{{colecoes.length}}</div>              
             </app-card-dashboard>
           </div>
           <div class="col-4">
             <app-card-dashboard>
               <div slot="titulo">Modelos</div>
-              <div slot="valor">64</div> 
+              <div slot="valor" class="fw-bold">{{modelos.length}}</div> 
             </app-card-dashboard>
           </div>
           <div class="col-4">
             <app-card-dashboard>
               <div slot="titulo">Orçamento Médio (R$)</div>
-              <div slot="valor">4700</div> 
+              <div slot="valor" class="fw-bold">4700</div> 
               <div slot="info">25%</div>
             </app-card-dashboard>
           </div>
@@ -30,7 +30,7 @@
             <div class="col-12">
                 <app-card-listagem>
                   <h6 slot="titulo">Maiores Orçamentos</h6>
-                  <table slot="tabela" class="table table-hover">
+                  <table slot="tabela" class="table table-responsive table-hover">
                     <thead>
                         <tr>
                             <th>Coleção</th>
@@ -40,7 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let colecao of colecoes">
+                        <tr *ngFor="let colecao of colecoesMaior">
                             <td>{{colecao.nomeColecao}}</td>
                             <td>{{colecao.responsavel}}</td>
                             <td>{{colecao.modelos}}</td>
