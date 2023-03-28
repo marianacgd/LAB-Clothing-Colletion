@@ -31,6 +31,7 @@ export class CriarColecaoComponent implements OnInit {
     
   }
 
+
   async criarColecao(){
     if(!this.formCriaColecao.valid){
       alert('Formulário inválido!');
