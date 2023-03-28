@@ -21,7 +21,7 @@ export class ColecaoService {
     return this.http.get<IColecao>( `${this.baseUrl}/id=${id}`)
   }
   
-  getColecoesMaxValorDesc(){
+  getColecoesMaxValorTop5(){
     return this.http.get<IColecao[]>( `${this.baseUrl}?_sort=orcamento&_order=desc&_limit=5`)
   }
 
