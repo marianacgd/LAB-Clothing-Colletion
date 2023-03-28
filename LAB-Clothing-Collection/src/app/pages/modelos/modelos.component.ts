@@ -23,6 +23,7 @@ export class ModelosComponent implements OnInit {
     this.modeloService.getModelos().subscribe((data) => {
       this.modelos = data;
     })
+    
   }
 
 }
