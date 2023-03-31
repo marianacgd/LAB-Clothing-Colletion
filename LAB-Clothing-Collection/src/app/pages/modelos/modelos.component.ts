@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IModelo } from 'src/app/interfaces/modelo';
 import { ModeloService } from 'src/app/services/modelo.service';
 
@@ -11,7 +12,7 @@ export class ModelosComponent implements OnInit {
 
   modelos: IModelo[] = [];
 
-  constructor (private modeloService: ModeloService) {}
+  constructor (private modeloService: ModeloService, private router: Router) {}
 
   ngOnInit(): void {
 
@@ -22,8 +23,11 @@ export class ModelosComponent implements OnInit {
   listarModelos(){
     this.modeloService.getModelos().subscribe((data) => {
       this.modelos = data;
-    })
-    
+    })   
+  }
+
+  editarModelo(modelo: IModelo){
+    this.router.navigate([`/criarmodelo/${modelo.id}`])
   }
 
 }
