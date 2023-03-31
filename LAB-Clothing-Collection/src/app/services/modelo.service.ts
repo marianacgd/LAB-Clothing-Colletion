@@ -18,12 +18,12 @@ export class ModeloService {
     return this.http.get<IModelo[]>(this.baseUrl)
   }
 
-  getModelosPorId(id: number): Observable<IModelo> {
-    return this.http.get<IModelo>( `${this.baseUrl}/id=${id}`)
+  getModelosPorId(id: string): Observable<IModelo> {
+    return this.http.get<IModelo>( `${this.baseUrl}/${id}`)
   }
 
   getModelosPorIdColecao(idColecao: number): Observable<IModelo> {
-    return this.http.get<IModelo>( `${this.baseUrl}/id=${idColecao}`)
+    return this.http.get<IModelo>( `${this.baseUrl}?idColecao=${idColecao}`)
   }
   
   postModelo(modelo: IModelo): Observable<IModelo> {
@@ -31,10 +31,10 @@ export class ModeloService {
   }
 
   putModelo(modelo: IModelo): Observable<IModelo> {
-    return this.http.put<IModelo>(this.baseUrl, modelo)
+    return this.http.put<IModelo>(`${this.baseUrl}/${modelo.id}`, modelo)
   }
 
   deleteModelo(id: number){
-    return this.http.delete<IModelo>(`${this.baseUrl}/id=${id}`)
+    return this.http.delete<IModelo>(`${this.baseUrl}/${id}`)
   }
 }
