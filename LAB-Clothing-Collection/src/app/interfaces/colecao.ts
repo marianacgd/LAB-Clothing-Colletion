@@ -7,7 +7,7 @@ export interface IColecao {
     responsavel: string;
     estacao: string;
     ano: number;
-    modelo: IModelo;
+    modelosQtd: number;
     orcamento: number;
     marca: string;
 }
