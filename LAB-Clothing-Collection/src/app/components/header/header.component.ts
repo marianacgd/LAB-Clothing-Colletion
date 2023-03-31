@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Placement as PopperPlacement, Options } from '@popperjs/core';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  logout(){}
 }
