@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContentComponent } from './layouts/content/content.component';
 import { FullComponent } from './layouts/full/full.component';
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
-import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
+import { AcaoColecaoComponent } from './pages/acao-colecao/acao-colecao.component';
 import { CriarContaComponent } from './pages/criar-conta/criar-conta.component';
-import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
+import { AcaoModeloComponent } from './pages/acao-modelo/acao-modelo.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EsqueciSenhaComponent } from './pages/esqueci-senha/esqueci-senha.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -28,8 +28,10 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'colecoes', component: ColecoesComponent, canActivate: [AuthGuard] },
       { path: 'modelos', component: ModelosComponent, canActivate: [AuthGuard] },
-      { path: 'criarcolecao', component: CriarColecaoComponent, canActivate: [AuthGuard] },
-      { path: 'criarmodelo', component: CriarModeloComponent, canActivate: [AuthGuard] },
+      { path: 'criarcolecao', component: AcaoColecaoComponent, canActivate: [AuthGuard]},
+      { path: 'criarcolecao/:id', component: AcaoColecaoComponent, canActivate: [AuthGuard] },
+      { path: 'criarmodelo', component: AcaoModeloComponent, canActivate: [AuthGuard] },
+      { path: 'criarmodelo/:id', component: AcaoModeloComponent, canActivate: [AuthGuard] },
     ],
   },
   { path: '**', redirectTo: 'login' },
