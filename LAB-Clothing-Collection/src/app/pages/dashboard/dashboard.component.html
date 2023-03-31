@@ -30,7 +30,7 @@
             <div class="col-12">
                 <app-card-listagem>
                   <h6 slot="titulo">Maiores Orçamentos</h6>
-                  <table slot="tabela" class="table table-responsive table-hover">
+                  <table slot="tabela" class="table table-responsive">
                     <thead>
                         <tr>
                             <th>Coleção</th>
@@ -43,7 +43,7 @@
                         <tr *ngFor="let colecao of colecoesMaior">
                             <td>{{colecao.nomeColecao}}</td>
                             <td>{{colecao.responsavel}}</td>
-                            <td>{{colecao.modelos}}</td>
+                            <td>{{colecao.modelo}}</td>
                             <td>R$ {{colecao.orcamento}}</td>
                         </tr>
                     </tbody>

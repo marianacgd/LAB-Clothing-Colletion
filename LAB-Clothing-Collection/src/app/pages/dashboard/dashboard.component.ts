@@ -23,7 +23,8 @@ export class DashboardComponent implements OnInit {
 
     this.listarColecoesMaiorOrcamento();
     this.listarColecoes();
-    this.listarModelos();    
+    this.listarModelos();   
+    this.orcamentoMedio(); 
   }
 
   listarColecoesMaiorOrcamento(){
@@ -51,7 +52,6 @@ export class DashboardComponent implements OnInit {
   }
 
   orcamentoMedio(){
-      
   }
 
 }
