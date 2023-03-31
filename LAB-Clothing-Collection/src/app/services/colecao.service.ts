@@ -17,8 +17,8 @@ export class ColecaoService {
     return this.http.get<IColecao[]>(this.baseUrl)
   }
 
-  getColecaoPorId(id: number): Observable<IColecao> {
-    return this.http.get<IColecao>( `${this.baseUrl}/id=${id}`)
+  getColecaoPorId(id: string): Observable<IColecao> {
+    return this.http.get<IColecao>( `${this.baseUrl}/${id}`)
   }
   
   getColecoesMaxValorTop5(){
@@ -30,10 +30,10 @@ export class ColecaoService {
   }
 
   putColecao(colecao: IColecao): Observable<IColecao> {
-    return this.http.put<IColecao>(this.baseUrl, colecao)
+    return this.http.put<IColecao>(`${this.baseUrl}/${colecao.id}`, colecao)
   }
 
   deleteColecao(id: number): Observable<IColecao> {
-    return this.http.delete<IColecao>( `${this.baseUrl}/id=${id}`)
+    return this.http.delete<IColecao>( `${this.baseUrl}/${id}`)
   }
 }
