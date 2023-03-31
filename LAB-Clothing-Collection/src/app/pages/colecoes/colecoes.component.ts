@@ -27,14 +27,13 @@ export class ColecoesComponent implements OnInit {
   listarColecoes(){
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
-      this.colecoes.filter((value) => this.listarModelosPorColecao(value))
+      this.colecoes.filter((length) => this.listarModelosPorColecao(length))
     })
   }
 
   listarModelosPorColecao(colecao: IColecao) {
     this.modeloService.getModelosPorIdColecao(Number(colecao.id)).subscribe((data) => {
-      console.log(data);
-      colecao.modelo = data;
+      colecao.modelosQtd = data!.length;
     });
   }
 
