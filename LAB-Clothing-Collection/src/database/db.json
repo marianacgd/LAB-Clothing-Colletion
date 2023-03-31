@@ -80,6 +80,15 @@
       "orcamento": 10000,
       "ano": 2023,
       "id": 11
+    },
+    {
+      "nomeColecao": "Coleção Adidas",
+      "responsavel": "Mariana",
+      "estacao": "Inverno",
+      "marca": "Adidas",
+      "orcamento": 9500,
+      "ano": 2023,
+      "id": 12
     }
   ],
   "modelos": [
@@ -127,6 +136,15 @@
       "possuiBordado": "sim",
       "possuiEstampa": "não",
       "id": 5
+    },
+    {
+      "nomeModelo": "Camisetas Sport",
+      "tipoModelo": "camisa",
+      "idColecao": "12",
+      "responsavel": "Mariana",
+      "possuiBordado": "não",
+      "possuiEstampa": "não",
+      "id": 6
     }
   ],
   "usuarios": [
