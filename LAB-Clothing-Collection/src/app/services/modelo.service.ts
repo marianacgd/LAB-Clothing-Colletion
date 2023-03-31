@@ -22,8 +22,8 @@ export class ModeloService {
     return this.http.get<IModelo>( `${this.baseUrl}/${id}`)
   }
 
-  getModelosPorIdColecao(idColecao: number): Observable<IModelo> {
-    return this.http.get<IModelo>( `${this.baseUrl}?idColecao=${idColecao}`)
+  getModelosPorIdColecao(idColecao: number): Observable<IModelo[]> {
+    return this.http.get<IModelo[]>( `${this.baseUrl}?idColecao=${idColecao}`)
   }
   
   postModelo(modelo: IModelo): Observable<IModelo> {
