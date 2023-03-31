@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit {
   numeroDeColecoes: string = '';
   modelos: IModelo[] = [];
   numeroDeModelos: string = '';
+  modelosPorColecao: string = '';
+  orcamentoMedio: number = 0;
 
   constructor(private colecaoService: ColecaoService, private modeloService: ModeloService){}
 
@@ -24,21 +26,20 @@ export class DashboardComponent implements OnInit {
     this.listarColecoesMaiorOrcamento();
     this.listarColecoes();
     this.listarModelos();   
-    this.orcamentoMedio(); 
+    this.calcularOrcamentoMedio(); 
   }
 
   listarColecoesMaiorOrcamento(){
     this.colecaoService.getColecoesMaxValorTop5().subscribe((data) => {
       this.colecoesMaior = data;
-      console.log(this.colecoesMaior);
+      this.calcularOrcamentoMedio();
+      this.colecoesMaior.filter((length) => this.listarModelosPorColecao(length))
     })
-    
   }
 
   listarColecoes(){
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
-      console.log(this.colecoes.length);
     })
     this.numeroDeColecoes = this.colecoes.length.toString();
   }
@@ -51,8 +52,17 @@ export class DashboardComponent implements OnInit {
     this.numeroDeModelos = this.modelos.length.toString();
   }
 
-  orcamentoMedio(){
+  listarModelosPorColecao(colecao: IColecao) {
+    this.modeloService.getModelosPorIdColecao(Number(colecao.id)).subscribe((data) => {
+      colecao.modelosQtd = data!.length;
+    });
   }
 
+  calcularOrcamentoMedio(){
+    this.colecoesMaior.forEach(f => {
+      this.orcamentoMedio += f.orcamento!;      
+    } )
+    this.orcamentoMedio = this.orcamentoMedio / 5;
+  }
 }
 
