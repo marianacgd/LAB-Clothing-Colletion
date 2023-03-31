@@ -23,11 +23,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let colecao of colecoes">
+                            <tr *ngFor="let colecao of colecoes" (click)="editarColecao(colecao)">
                                 <td>{{colecao.nomeColecao}}</td>
                                 <td>{{colecao.responsavel}}</td>
                                 <td>{{colecao.estacao}} {{colecao.ano}}</td>
-                                <td>{{colecao.modelos}}</td>
+                                <td>{{colecao.modelo}}</td>
                                 <td>R$ {{colecao.orcamento}}</td>
                             </tr>
                         </tbody>
