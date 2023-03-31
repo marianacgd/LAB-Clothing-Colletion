@@ -20,8 +20,8 @@ import { CardDashboardComponent } from './components/card-dashboard/card-dashboa
 import { ColecoesComponent } from './pages/colecoes/colecoes.component';
 import { ModelosComponent } from './pages/modelos/modelos.component';
 import { CardListagemComponent } from './components/card-listagem/card-listagem.component';
-import { CriarColecaoComponent } from './pages/criar-colecao/criar-colecao.component';
-import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.component';
+import { AcaoColecaoComponent } from './pages/acao-colecao/acao-colecao.component';
+import { AcaoModeloComponent } from './pages/acao-modelo/acao-modelo.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +39,8 @@ import { CriarModeloComponent } from './pages/criar-modelo/criar-modelo.componen
     ColecoesComponent,
     ModelosComponent,
     CardListagemComponent,
-    CriarColecaoComponent,
-    CriarModeloComponent
+    AcaoColecaoComponent,
+    AcaoModeloComponent
   ],
   imports: [
     BrowserModule,
