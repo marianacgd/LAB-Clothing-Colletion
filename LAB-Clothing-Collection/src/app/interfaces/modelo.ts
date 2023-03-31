@@ -1,6 +1,6 @@
 
 export interface IModelo {
-    id: number;
+    id: string;
     nomeModelo: string;
     tipoModelo: string;
     idColecao: number;
