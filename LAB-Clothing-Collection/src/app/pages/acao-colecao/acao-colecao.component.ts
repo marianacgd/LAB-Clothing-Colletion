@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { async } from 'rxjs';
 import { IColecao } from 'src/app/interfaces/colecao';
 import { ColecaoService } from 'src/app/services/colecao.service';
+import { ModeloService } from 'src/app/services/modelo.service';
 
 @Component({
   selector: 'app-acao-colecao',
@@ -16,7 +18,7 @@ export class AcaoColecaoComponent implements OnInit {
   colecao: IColecao[] = [];
   colecaoID: string = '';
 
-  constructor(private fb: FormBuilder, private colecaoService: ColecaoService, private router: Router, private activateRoute: ActivatedRoute){
+  constructor(private fb: FormBuilder, private colecaoService: ColecaoService, private router: Router, private activateRoute: ActivatedRoute, private modeloService: ModeloService){
     this.formCriaColecao = this.fb.group({
       nomeColecao: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
@@ -78,11 +80,19 @@ export class AcaoColecaoComponent implements OnInit {
   }
 
   async deletarColecao(){
-    await this.colecaoService.deleteColecao(Number(this.colecaoID)).toPromise()
-    .then(()=> {
-      alert('Coleção deletada com sucesso!');
-      this.router.navigate(['/colecoes']); 
-    })
-    .catch(erro=> alert('Erro ao deletar!'));
+    await this.modeloService.getModelosPorIdColecao(Number(this.colecaoID)).subscribe(async data => 
+      {
+        if (data!.length > 0) {
+          alert('Coleção possuí modelos cadastrados!');
+          return
+        }
+        
+        await this.colecaoService.deleteColecao(Number(this.colecaoID)).toPromise()
+        .then(()=> {
+          alert('Coleção deletada com sucesso!');
+          this.router.navigate(['/colecoes']); 
+        })
+        .catch(erro=> alert('Erro ao deletar!'));
+      })
     }
 }
