@@ -1,4 +1,4 @@
-<div class="main">
+<!-- <div class="main"> -->
     
     <app-box-login>
         <div slot="header">
@@ -6,42 +6,36 @@
             <p class="text-50 mb-4 text-black-50">Insira seus dados para criar uma conta</p>
         </div>
 
-        <div slot="body">
+        <div slot="body" class="mx-4">
             <form [formGroup]="formCadastro" (ngSubmit)="cadastrarUser()">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm" id="nome" placeholder="Nome" formControlName="nome">
-                    <label for="nome" class="text-black-50">Nome</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-md" placeholder="Nome" formControlName="nome">
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-sm" id="empresa" placeholder="Empresa" formControlName="empresa">
-                    <label for="empresa" class="text-black-50">Empresa</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-md" placeholder="Empresa" formControlName="empresa">
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control form-control-lg" id="cnpj" placeholder="CNPJ" formControlName="cnpj">
-                    <label for="cnpj" class="text-black-50">CNPJ</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-md" placeholder="CNPJ" formControlName="cnpj">
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" formControlName="email">
-                    <label for="email" class="text-black-50">Informe seu e-mail</label>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control form-control-md" placeholder="Informe seu e-mail" formControlName="email">
                 </div>
                 
-                <div class="row">
-                    <div class="col-6">                
-                        <div class="form-floating mb-4">
-                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Password" formControlName="password">
-                        <label for="password" class="text-black-50">Informe sua senha</label>
-                        </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control form-control-md" placeholder="Informe sua senha" formControlName="password">
+                        </div>                
                     </div>
 
-                    <div class="col-6">                
-                        <div class="form-floating mb-4">
-                        <input type="password" class="form-control form-control-lg" id="confirmpassword" placeholder="ConfirmPassword" formControlName="confirmpassword">
-                        <label for="confirmpassword" class="text-black-50">Confirmar senha</label>
-                        </div>
+                    <div class="col-6">    
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control form-control-md" placeholder="Confirmar senha" formControlName="password">
+                        </div>             
                     </div>
                 </div>
                 
-                <button class="btn btn-lg btn-primary w-100 custom-btn" type="submit">Criar Conta</button>
+                <button class="btn btn-md btn-primary w-100 custom-btn" type="submit">Criar Conta</button>
             </form>
         </div>
                
@@ -50,4 +44,4 @@
         </div>  
     
     </app-box-login>
-</div>
+<!-- </div> -->
