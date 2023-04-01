@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   numeroDeModelos: string = '';
   modelosPorColecao: string = '';
   orcamentoMedio: number = 0;
-
+  
   constructor(private colecaoService: ColecaoService, private modeloService: ModeloService){}
 
   ngOnInit(): void {

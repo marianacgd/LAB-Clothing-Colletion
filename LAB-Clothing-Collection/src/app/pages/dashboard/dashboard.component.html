@@ -21,7 +21,7 @@
           <div class="col-4">
             <app-card-dashboard>
               <div slot="titulo">Orçamento Médio (R$)</div>
-              <div slot="valor" class="fw-bold">{{orcamentoMedio}}</div> 
+              <div slot="valor" class="fw-bold">{{orcamentoMedio.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</div> 
               <div slot="info">25%</div>
             </app-card-dashboard>
           </div>
@@ -44,10 +44,11 @@
                             <td>{{colecao.nomeColecao}}</td>
                             <td>{{colecao.responsavel}}</td>
                             <td>{{colecao.modelosQtd}}</td>
-                            <td>R$ {{colecao.orcamento}}</td>
+                            <td>{{colecao.orcamento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</td>
                         </tr>
                     </tbody>
                 </table>
+
                 </app-card-listagem>
             </div>
           </div>
