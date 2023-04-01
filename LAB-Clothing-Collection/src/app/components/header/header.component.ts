@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Placement as PopperPlacement, Options } from '@popperjs/core';
 
 @Component({
@@ -8,5 +9,10 @@ import { Placement as PopperPlacement, Options } from '@popperjs/core';
 })
 export class HeaderComponent {
 
-  logout(){}
+  constructor(private router: Router) {}
+
+  logout(){
+    sessionStorage.removeItem('logado');
+    this.router.navigate(['/login']);
+  }
 }
