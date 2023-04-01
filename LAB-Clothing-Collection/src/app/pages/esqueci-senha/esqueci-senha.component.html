@@ -1,28 +1,40 @@
-<div class="main">
+<!-- <div class="main"> -->
     
     <app-box-login>
 
         <div slot="header">
-            <div class="row">
+            <div class="row mt-2 mb-3 ">
                 <div class="col-1">
                     <a routerLink="/login"><img src="../../../assets/images/Arrow1.png" alt="voltar"></a>
                 </div>
                 <div class="col-11">            
-                    <h2 class="mb-2 custom-h2">Redefinir Senha</h2>
+                    <h5 class="mb-2 fw-semibold custom-h5">Redefinir Senha</h5>
                 </div>
-                <p class="mb-5 text-black-50">Digite o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha.</p>
-        </div>
-        </div>
-        <div slot="body">
-            <form>
-                <div class="form-floating mb-5">
-                    <input type="email" class="form-control form-control-lg" id="floatingInput" placeholder="Email">
-                    <label for="floatingInput" class="text-black-50">Informe seu e-mail</label>
+                <div *ngIf="email === ''; else templateName">
+                    <p class="mb-5 ms-4 text-black-50">Digite o e-mail associado à sua conta e enviaremos instruções para redefinir sua senha.</p>
                 </div>
-               
-                <button class="btn btn-lg w-100 custom-btn" type="submit">Enviar Recuperação</button>
-            </form>
+                
+                <ng-template #templateName>
+                    <p class="mt-5 mb-5 text-black-50">Um link para redefinição de senha foi enviado para o e-mail {{email}}.</p>
+                </ng-template>    
+            </div>
+        </div>
+        <div slot="body" class="mx-4">
+
+            <div *ngIf="email === ''; else templateNameForm">
+                <form [formGroup]="formAlterarSenha" (ngSubmit)="alterarSenha()">
+                    <div class="input-group mb-5">
+                        <input type="email" class="form-control form-control-md" placeholder="Informe seu e-mail" formControlName="email">
+                    </div>
+                
+                    <button class="btn btn-md w-100 custom-btn" type="submit">Enviar Recuperação</button>
+                </form>
+            </div>
+            
+            <ng-template #templateNameForm>
+                <button class="btn btn-md w-100 custom-btn" type="submit" routerLink="/login">Ir para login</button>
+            </ng-template>
         </div>
     
     </app-box-login>
-</div>
+<!-- </div> -->
