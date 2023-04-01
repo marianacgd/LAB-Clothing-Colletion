@@ -14,7 +14,8 @@ export class ColecoesComponent implements OnInit {
 
   colecoes: IColecao[] = [];
   modelosPorColecao: string = '';
-
+  pagePagination = 1
+  pageSizePagination = 3
 
   constructor(private colecaoService: ColecaoService, private router: Router, private modeloService: ModeloService){}
 
@@ -40,5 +41,4 @@ export class ColecoesComponent implements OnInit {
   editarColecao(colecao: IColecao){
     this.router.navigate([`/criarcolecao/${colecao.id}`])
   }
-
 }

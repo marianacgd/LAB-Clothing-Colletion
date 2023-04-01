@@ -23,15 +23,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let colecao of colecoes" (click)="editarColecao(colecao)">
+                            <tr *ngFor="let colecao of colecoes | slice: (pagePagination-1) * pageSizePagination : pagePagination * pageSizePagination" 
+                                                                  (click)="editarColecao(colecao)">
                                 <td>{{colecao.nomeColecao}}</td>
                                 <td>{{colecao.responsavel}}</td>
                                 <td>{{colecao.estacao}} {{colecao.ano}}</td>
                                 <td>{{colecao.modelosQtd}}</td>
-                                <td>R$ {{colecao.orcamento}}</td>
+                                <td>{{colecao.orcamento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</td>
                             </tr>
+                            <ngb-pagination  [collectionSize]="colecoes.length" [(page)]="pagePagination" [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
                         </tbody>
                     </table>
+                    
                 </app-card-listagem>
             </div>
           </div>
