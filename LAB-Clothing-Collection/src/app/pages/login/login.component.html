@@ -1,22 +1,24 @@
-<div class="main">
+<!-- <div class="main"> -->
     
     <app-box-login>
 
         <div slot="header">
-            <h4 class="mb-2">Sign In</h4>
-            <p class="mb-5 text-black-50">Insira suas credenciais para acessar sua conta</p>
+            <h5 class="card-title mb-2">Sign In</h5>
+            <p class="mb-4 text-black-50">Insira suas credenciais para acessar sua conta</p>
         </div>
-        <div slot="body">
+        <div slot="body" class="mx-3">
             <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-                <div class="form-floating mb-4">
+               
+                <div class="form-floating mb-3">
                     <input type="email" class="form-control" id="emaillogin" placeholder="Email" formControlName="email">
                     <label for="emaillogin" class="text-black-50">Informe seu e-mail</label>
                 </div>
+                
                 <div class="form-floating mb-4">
                     <input type="password" class="form-control" id="passwordlogin" placeholder="Password" formControlName="password">
                     <label for="passwordlogin" class="text-black-50">Informe sua senha</label>
                 </div>
-                <button class="btn btn-lg btn-primary w-100" type="submit">Entrar</button>
+                <button class="btn btn-md btn-primary custom-btn w-100" type="submit">Entrar</button>
             </form>
         </div>
                
@@ -26,4 +28,4 @@
         </div>  
     
     </app-box-login>
-</div>
+<!-- </div> -->
