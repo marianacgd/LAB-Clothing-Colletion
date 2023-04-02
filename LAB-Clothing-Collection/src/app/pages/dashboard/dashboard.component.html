@@ -1,57 +1,56 @@
 <div class="main">
-    <div class="container">
-        <div class="row justify-content-start">
-          <div class="col-12 mt-4">
-            <h4>Dashboard</h4>
-            </div>
-        </div>
-        <div class="row align-items-center justify-content-center mt-3">
-          <div class="col-4">
-            <app-card-dashboard>
-              <div slot="titulo">Coleções</div>
-              <div slot="valor" class="fw-bold">{{colecoes.length}}</div>              
-            </app-card-dashboard>
-          </div>
-          <div class="col-4">
-            <app-card-dashboard>
-              <div slot="titulo">Modelos</div>
-              <div slot="valor" class="fw-bold">{{modelos.length}}</div> 
-            </app-card-dashboard>
-          </div>
-          <div class="col-4">
-            <app-card-dashboard>
-              <div slot="titulo">Orçamento Médio (R$)</div>
-              <div slot="valor" class="fw-bold">{{orcamentoMedio.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</div> 
-              <div slot="info">25%</div>
-            </app-card-dashboard>
-          </div>
-        </div>
-        <div class="row align-items-center justify-content-center mt-3">
-            <div class="col-12">
-                <app-card-listagem>
-                  <h6 slot="titulo">Maiores Orçamentos</h6>
-                  <table slot="tabela" class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Coleção</th>
-                            <th>Responsável</th>
-                            <th>Modelos</th>
-                            <th>Orçamento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let colecao of colecoesMaior">
-                            <td>{{colecao.nomeColecao}}</td>
-                            <td>{{colecao.responsavel}}</td>
-                            <td>{{colecao.modelosQtd}}</td>
-                            <td>{{colecao.orcamento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                </app-card-listagem>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 mt-2">
+        <h4>Dashboard</h4>
       </div>
-</div>
+    </div>
+    <div class="row align-items-center justify-content-center mt-3">
+      <div class="col-4">
+        <app-card-dashboard>
+          <div slot="titulo">Coleções</div>
+          <div slot="valor" class="fw-bold">{{colecoes.length}}</div>
+        </app-card-dashboard>
+      </div>
+      <div class="col-4">
+        <app-card-dashboard>
+          <div slot="titulo">Modelos</div>
+          <div slot="valor" class="fw-bold">{{modelos.length}}</div>
+        </app-card-dashboard>
+      </div>
+      <div class="col-4">
+        <app-card-dashboard>
+          <div slot="titulo">Orçamento Médio (R$)</div>
+          <div slot="valor" class="fw-bold">{{orcamentoMedio.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</div>
+          <div slot="info" class="text-end">25%</div>
+        </app-card-dashboard>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center mt-3">
+      <div class="col-12">
+        <app-card-listagem>
+          <h6 slot="titulo">Maiores Orçamentos</h6>
+          <table slot="tabela" class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Coleção</th>
+                <th>Responsável</th>
+                <th>Modelos</th>
+                <th>Orçamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let colecao of colecoesMaior">
+                <td>{{colecao.nomeColecao}}</td>
+                <td>{{colecao.responsavel}}</td>
+                <td>{{colecao.modelosQtd}}</td>
+                <td>{{colecao.orcamento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}</td>
+              </tr>
+            </tbody>
+          </table>
 
+        </app-card-listagem>
+      </div>
+    </div>
+  </div>
+</div>

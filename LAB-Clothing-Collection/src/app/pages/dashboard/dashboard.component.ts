@@ -18,18 +18,18 @@ export class DashboardComponent implements OnInit {
   numeroDeModelos: string = '';
   modelosPorColecao: string = '';
   orcamentoMedio: number = 0;
-  
-  constructor(private colecaoService: ColecaoService, private modeloService: ModeloService){}
+
+  constructor(private colecaoService: ColecaoService, private modeloService: ModeloService) { }
 
   ngOnInit(): void {
 
     this.listarColecoesMaiorOrcamento();
     this.listarColecoes();
-    this.listarModelos();   
-    this.calcularOrcamentoMedio(); 
+    this.listarModelos();
+    this.calcularOrcamentoMedio();
   }
 
-  listarColecoesMaiorOrcamento(){
+  listarColecoesMaiorOrcamento() {
     this.colecaoService.getColecoesMaxValorTop5().subscribe((data) => {
       this.colecoesMaior = data;
       this.calcularOrcamentoMedio();
@@ -37,17 +37,17 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  listarColecoes(){
+  listarColecoes() {
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
     })
     this.numeroDeColecoes = this.colecoes.length.toString();
   }
 
-  listarModelos(){
+  listarModelos() {
     this.modeloService.getModelos().subscribe((data) => {
       this.modelos = data;
-      console.log(this.modelos.length);
+      // console.log(this.modelos.length);
     })
     this.numeroDeModelos = this.modelos.length.toString();
   }
@@ -58,10 +58,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  calcularOrcamentoMedio(){
+  calcularOrcamentoMedio() {
     this.colecoesMaior.forEach(f => {
-      this.orcamentoMedio += f.orcamento!;      
-    } )
+      this.orcamentoMedio += f.orcamento!;
+    })
     this.orcamentoMedio = this.orcamentoMedio / 5;
   }
 }
