@@ -28,7 +28,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'colecoes', component: ColecoesComponent, canActivate: [AuthGuard] },
       { path: 'modelos', component: ModelosComponent, canActivate: [AuthGuard] },
-      { path: 'criarcolecao', component: AcaoColecaoComponent, canActivate: [AuthGuard]},
+      { path: 'criarcolecao', component: AcaoColecaoComponent, canActivate: [AuthGuard] },
       { path: 'criarcolecao/:id', component: AcaoColecaoComponent, canActivate: [AuthGuard] },
       { path: 'criarmodelo', component: AcaoModeloComponent, canActivate: [AuthGuard] },
       { path: 'criarmodelo/:id', component: AcaoModeloComponent, canActivate: [AuthGuard] },
