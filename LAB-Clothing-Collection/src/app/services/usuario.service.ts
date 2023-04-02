@@ -17,7 +17,7 @@ export class UsuarioService {
     return this.http.get<IUsuario[]>(this.baseUrl)
   }
 
-  getUsuario(usuario: IUsuario):Observable<any> {
+  getUsuario(usuario: IUsuario): Observable<any> {
     return this.http.get<IUsuario>(`${this.baseUrl}?email=${usuario.email}`);
   }
 
@@ -25,23 +25,21 @@ export class UsuarioService {
     return this.http.post<IUsuario>(this.baseUrl, usuario)
   }
 
-  getUsuarioLogin(usuario: IUsuario){
+  getUsuarioLogin(usuario: IUsuario) {
 
     const usuariosDb = `${this.baseUrl}?email=${usuario!.email}`;
     const users = this.http.get<IUsuario[]>(usuariosDb);
     users.subscribe(data => {
 
-      if(usuario.email === data[0].email && usuario.password === data[0].password){
+      if (usuario.email === data[0].email && usuario.password === data[0].password) {
         sessionStorage.setItem('logado', 'true');
         this.router.navigate(['/dashboard']);
         console.log('funcionou');
-      }else {
+      } else {
         sessionStorage.setItem('logado', 'false');
         console.log('Não funcionou!');
         alert('Email ou senha inválidos!');
       }
-      // console.log(usuario);
-      // console.log(data);
     })
   }
 }
