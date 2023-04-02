@@ -11,19 +11,18 @@ import { ModeloService } from 'src/app/services/modelo.service';
   templateUrl: './acao-modelo.component.html',
   styleUrls: ['./acao-modelo.component.scss']
 })
-export class AcaoModeloComponent implements OnInit{
+export class AcaoModeloComponent implements OnInit {
 
   formCriaModelo!: FormGroup;
-
   modelo: IModelo[] = [];
   modeloID: string = '';
   colecoes: IColecao[] = [];
 
-  constructor(private fb: FormBuilder, private modeloService: ModeloService, private router: Router, private activateRoute: ActivatedRoute, private colecaoService: ColecaoService){
+  constructor(private fb: FormBuilder, private modeloService: ModeloService, private router: Router, private activateRoute: ActivatedRoute, private colecaoService: ColecaoService) {
     this.formCriaModelo = this.fb.group({
       nomeModelo: ['', [Validators.required]],
       tipoModelo: ['', [Validators.required]],
-      idColecao: ['', [Validators.required]],
+      sltColecao: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
       possuiBordado: ['', [Validators.required]],
       possuiEstampa: ['', [Validators.required]]
@@ -33,68 +32,61 @@ export class AcaoModeloComponent implements OnInit{
   ngOnInit(): void {
 
     this.modeloID = this.activateRoute.snapshot.paramMap.get('id')!;
-
-    if(this.modeloID !== null){
+    if (this.modeloID !== null) {
       this.getModelo();
     }
-    
     this.listarColecoesSelect()
-    
   }
 
-  getModelo(){
-    this.modeloService.getModelosPorId(this.modeloID).subscribe((data) => {      
+  getModelo() {
+    this.modeloService.getModelosPorId(this.modeloID).subscribe((data) => {
       this.formCriaModelo.controls["nomeModelo"].setValue(data.nomeModelo);
       this.formCriaModelo.controls["tipoModelo"].setValue(data.tipoModelo);
-      this.formCriaModelo.controls["idColecao"].setValue(data.idColecao);
+      this.formCriaModelo.controls["sltColecao"].setValue(data.sltColecao);
       this.formCriaModelo.controls["responsavel"].setValue(data.responsavel);
       this.formCriaModelo.controls["possuiBordado"].setValue(data.possuiBordado);
       this.formCriaModelo.controls["possuiEstampa"].setValue(data.possuiEstampa);
-    
     })
-
   }
 
-  listarColecoesSelect(){
+  listarColecoesSelect() {
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
     })
   }
 
-  async criarModelo(){
-    if(!this.formCriaModelo.valid){
+  async criarModelo() {
+    if (!this.formCriaModelo.valid) {
       alert('Formulário inválido!');
       return;
     }
-
     const modelo: IModelo = this.formCriaModelo.value;
-    
-    if(this.modeloID === null){
+    if (this.modeloID === null) {
       await this.modeloService.postModelo(modelo).toPromise()
-      .then(()=>{
-        alert('Modelo criado com sucesso!');
-        this.router.navigate(['/modelos']);
-      })
-      .catch(erro=> alert('Erro ao incluir!'));        
+        .then(() => {
+          alert('Modelo criado com sucesso!');
+          this.router.navigate(['/modelos']);
+        })
+        .catch(erro => alert('Erro ao incluir!'));
     }
-    else{
+    else {
       modelo.id = this.modeloID;
       await this.modeloService.putModelo(modelo).toPromise()
-      .then(()=> {
-        alert('Modelo alterado com sucesso!');
-        this.router.navigate(['/modelos']);
-      })
-      .catch(erro=> alert('Erro ao alterar!'));
-    }    
+        .then(() => {
+          alert('Modelo alterado com sucesso!');
+          this.router.navigate(['/modelos']);
+        })
+        .catch(erro => alert('Erro ao alterar!'));
+    }
   }
 
-  async deletarModelo(){
+  async deletarModelo() {
     await this.modeloService.deleteModelo(Number(this.modeloID)).toPromise()
-    .then(()=> {
-      alert('Modelo deletado com sucesso!');
-      this.router.navigate(['/modelos']);
-    })
-    .catch(erro=> alert('Erro ao deletar!'));
+      .then(() => {
+        alert('Modelo deletado com sucesso!');
+        this.router.navigate(['/modelos']);
+      })
+      .catch(erro => alert('Erro ao deletar!'));
   }
 
 }
