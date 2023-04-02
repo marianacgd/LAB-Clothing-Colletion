@@ -10,14 +10,14 @@ export class EsqueciSenhaComponent {
   email: string = "";
   formAlterarSenha!: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder) {
     this.formAlterarSenha = this.fb.group({
       email: ['', [Validators.required, Validators.email]]
     })
   }
 
-  alterarSenha(){
-    if(!this.formAlterarSenha.valid){
+  alterarSenha() {
+    if (!this.formAlterarSenha.valid) {
       alert('E-mail inválido!');
       return;
     }
