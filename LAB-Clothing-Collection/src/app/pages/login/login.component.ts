@@ -13,51 +13,28 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formLogin!: FormGroup;
-  
-  usuario:  IUsuario[] = [];
+  usuario: IUsuario[] = [];
 
-  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private router: Router) {}
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private router: Router) { }
 
   ngOnInit(): void {
     this.formLogin = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     })
-    
   }
 
-  // listarUsuario(email: IUsuario){
-  //   this.usuarioService.getUsuario(email.email).subscribe(data =>{
-  //     this.usuario = data;
-  //   })
-  // }
-
-  onSubmit(){   
-    // this.usuarioService.getUsuario()
-    // .subscribe()
-
-
-    if (!this.formLogin.valid){
+  onSubmit() {
+    if (!this.formLogin.valid) {
       alert('Email ou Senha inválidos!')
       return;
     }
-     const usuarioForm: IUsuario = this.formLogin.value;
-     
-     this.usuarioService.getUsuarioLogin(usuarioForm);
-     this.router.navigate(['/dashboard']);
-     
-    //  this.usuarioService.login(this.usuario)
+    const usuarioForm: IUsuario = this.formLogin.value;
 
-    //  if(this.formLogin.value.password === this.usuario){
-    //   console.log('true');
-
-    //  }
-    //  console.log('false')
-
-
-    
-    
+    this.usuarioService.getUsuarioLogin(usuarioForm);
+    this.router.navigate(['/dashboard']);
   }
+
 
 }
 
