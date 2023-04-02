@@ -1,150 +1,159 @@
 {
   "colecoes": [
     {
-      "nomeColecao": "Coleção 2 update",
-      "responsavel": "Responsavel 1",
-      "estacao": "Outono",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 3100,
-      "id": 2
-    },
-    {
-      "id": 3,
-      "nomeColecao": "Coleção 3",
-      "responsavel": "Responsavel 1",
-      "estacao": "Inverno",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 5000
-    },
-    {
-      "id": 4,
-      "nomeColecao": "Coleção 4",
-      "responsavel": "Responsavel 1",
-      "estacao": "Inverno",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 7000
-    },
-    {
-      "id": 6,
-      "nomeColecao": "Coleção 6",
-      "responsavel": "Responsavel 1",
-      "estacao": "Verão",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 2500
-    },
-    {
-      "id": 7,
-      "nomeColecao": "Coleção 7",
-      "responsavel": "Responsavel 1",
-      "estacao": "Outono",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 3200
-    },
-    {
-      "nomeColecao": "Coleção 8 UPDATE",
-      "responsavel": "Responsavel 1 UPDTE",
-      "estacao": "Inverno UPDATE",
-      "marca": "UPDATE MARCA",
-      "orcamento": 2435,
-      "ano": 2021,
-      "id": 8
-    },
-    {
-      "id": 9,
-      "nomeColecao": "Coleção 9",
-      "responsavel": "Responsavel 1",
-      "estacao": "Outono",
-      "ano": 2023,
-      "modelos": [],
-      "orcamento": 2800
-    },
-    {
-      "nomeColecao": "Coleção 10",
-      "responsavelColecao": "Responsável 2",
-      "estacao": "Outono",
-      "marca": "Minha Marca",
-      "orcamento": 7000,
-      "anoLancamento": 2023,
-      "id": 10
-    },
-    {
-      "nomeColecao": "Coleção 11",
-      "responsavel": "update",
-      "estacao": "update",
-      "marca": "update",
-      "orcamento": 10000,
-      "ano": 2023,
-      "id": 11
-    },
-    {
-      "nomeColecao": "Coleção Adidas",
-      "responsavel": "Mariana",
+      "nomeColecao": "Adidas",
+      "responsavel": "Yan Esteves",
       "estacao": "Inverno",
       "marca": "Adidas",
       "orcamento": 9500,
       "ano": 2023,
-      "id": 12
+      "id": 1
+    },
+    {
+      "nomeColecao": "Renner",
+      "responsavel": "Yan Esteves",
+      "estacao": "Inverno",
+      "marca": "Renner",
+      "orcamento": 3500,
+      "ano": 2023,
+      "id": 2
+    },
+    {
+      "nomeColecao": "PatBO",
+      "responsavel": "Yan Esteves",
+      "estacao": "Inverno",
+      "marca": "PatBO",
+      "orcamento": 8700,
+      "ano": 2023,
+      "id": 3
+    },
+    {
+      "nomeColecao": "Nike",
+      "responsavel": "Yan Esteves",
+      "estacao": "Inverno",
+      "marca": "Nike",
+      "orcamento": 9100,
+      "ano": 2023,
+      "id": 4
+    },
+    {
+      "nomeColecao": "Nike Air Max",
+      "responsavel": "Mariana Daruix",
+      "estacao": "Primavera/Verão",
+      "marca": "Nike",
+      "orcamento": 12000,
+      "ano": 2024,
+      "id": 5
+    },
+    {
+      "nomeColecao": "Zara",
+      "responsavel": "Mariana Daruix",
+      "estacao": "Verão",
+      "marca": "Zara",
+      "orcamento": 8000,
+      "ano": 2024,
+      "id": 6
+    },
+    {
+      "nomeColecao": "C&A ",
+      "responsavel": "Mariana Daruix",
+      "estacao": "Verão",
+      "marca": "C&A",
+      "orcamento": 5600,
+      "ano": 2024,
+      "id": 7
+    },
+    {
+      "nomeColecao": "Riachuelo",
+      "responsavel": "Mariana Daruix",
+      "estacao": "Outono",
+      "marca": "Riachuelo",
+      "orcamento": 5800,
+      "ano": 2024,
+      "id": 8
     }
   ],
   "modelos": [
     {
-      "id": 1,
-      "nomeModelo": "Modelo 1",
+      "nomeModelo": "Camisetas Sport",
+      "tipoModelo": "camisa",
+      "sltColecao": "Adidas",
+      "responsavel": "Yan Esteves",
+      "possuiBordado": "não",
+      "possuiEstampa": "não",
+      "id": 1
+    },
+    {
+      "nomeModelo": "Shorts e Bermudas",
       "tipoModelo": "bermuda",
-      "idColecao": 9,
-      "responsavel": "Responsavel 1",
-      "possuiBordado": "não",
-      "possuiEstampa": "sim"
-    },
-    {
-      "id": 2,
-      "nomeModelo": "Modelo 2",
-      "tipoModelo": "biquini",
-      "idColecao": 1,
-      "responsavel": "Responsavel 1",
-      "possuiBordado": "não",
-      "possuiEstampa": "não"
-    },
-    {
-      "id": 3,
-      "nomeModelo": "Modelo 3",
-      "tipoModelo": "bolsa",
-      "idColecao": 3,
-      "responsavel": "Responsavel 1",
-      "possuiBordado": "não",
-      "possuiEstampa": "não"
-    },
-    {
-      "id": 4,
-      "nomeModelo": "Modelo 4",
-      "tipoModelo": "boné",
-      "idColecao": 5,
-      "responsavel": "Responsavel 1",
+      "sltColecao": "Renner",
+      "responsavel": "Yan Esteves",
       "possuiBordado": "sim",
-      "possuiEstampa": "não"
+      "possuiEstampa": "não",
+      "id": 2
     },
     {
-      "nomeModelo": "Modelo 5 ",
+      "nomeModelo": "Vestido Casual",
+      "tipoModelo": "saia",
+      "sltColecao": "PatBO",
+      "responsavel": "Yan Esteves",
+      "possuiBordado": "não",
+      "possuiEstampa": "sim",
+      "id": 3
+    },
+    {
+      "nomeModelo": "Calças Legging",
       "tipoModelo": "calca",
-      "idColecao": "9",
-      "responsavel": "Responsável 2",
+      "sltColecao": "Adidas",
+      "responsavel": "Yan Esteves",
+      "possuiBordado": "sim",
+      "possuiEstampa": "não",
+      "id": 4
+    },
+    {
+      "nomeModelo": "Tênis Nike Air Force",
+      "tipoModelo": "calcados",
+      "sltColecao": "Nike Air Max",
+      "responsavel": "Mariana Daruix",
       "possuiBordado": "sim",
       "possuiEstampa": "não",
       "id": 5
     },
     {
-      "nomeModelo": "Camisetas Sport",
-      "tipoModelo": "camisa",
-      "idColecao": "12",
-      "responsavel": "Mariana",
+      "nomeModelo": "Vestido Leve e Divertido",
+      "tipoModelo": "saia",
+      "sltColecao": "Zara",
+      "responsavel": "Mariana Daruix",
+      "possuiBordado": "não",
+      "possuiEstampa": "sim",
+      "id": 6
+    },
+    {
+      "nomeModelo": "Tênis Adidas Grand Court",
+      "tipoModelo": "calcados",
+      "sltColecao": "Adidas",
+      "responsavel": "Mariana Daruix",
+      "possuiBordado": "não",
+      "possuiEstampa": "sim",
+      "id": 7
+    },
+    {
+      "nomeModelo": "Maiô Cavado",
+      "tipoModelo": "biquini",
+      "sltColecao": "C&A ",
+      "responsavel": "Mariana Daruix",
+      "possuiBordado": "não",
+      "possuiEstampa": "sim",
+      "id": 8
+    },
+    {
+      "nomeModelo": "Biquini Colorido",
+      "tipoModelo": "biquini",
+      "sltColecao": "C&A ",
+      "responsavel": "Mariana Daruix",
       "possuiBordado": "não",
       "possuiEstampa": "não",
-      "id": 6
+      "id": 9
     }
   ],
   "usuarios": [
@@ -168,6 +177,33 @@
       "email": "jamilsd@gmail.com",
       "password": "12345678",
       "id": 3
+    },
+    {
+      "nome": "TESTE UM",
+      "empresa": "EMPRESA DOIS",
+      "cnpj": "12345678444444",
+      "email": "teste@uol.com.br",
+      "password": "12345678",
+      "confirmpassword": "12345678",
+      "id": 4
+    },
+    {
+      "nome": "Mariana",
+      "empresa": "Audaces",
+      "cnpj": "12345678901234",
+      "email": "mariana@audaces.com",
+      "password": "audaces1",
+      "confirmpassword": "audaces1",
+      "id": 5
+    },
+    {
+      "nome": "Mariana",
+      "empresa": "Audaces2",
+      "cnpj": "12345678901234",
+      "email": "mariana2@audaces.com",
+      "password": "audaces2",
+      "confirmpassword": "audaces2",
+      "id": 6
     }
   ]
 }
