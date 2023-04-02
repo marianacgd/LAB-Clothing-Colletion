@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUsuario } from 'src/app/interfaces/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
@@ -25,6 +25,20 @@ export class CriarContaComponent {
       confirmpassword: ['', [Validators.required, Validators.minLength(8)]],
     })
 
+    this.formCadastro.addValidators(
+      this.senhasIguaisValidator(
+        this.formCadastro.get('password')!, this.formCadastro.get('confirmpassword')!
+      )
+      )
+
+  }
+
+  senhasIguaisValidator(controlName: AbstractControl, matchingControlName: AbstractControl) {
+    return () => {
+      if (controlName.value !== matchingControlName.value)
+        return { match_error: 'Value does not match' };
+      return null;
+    };
   }
 
   async cadastrarUser() {
