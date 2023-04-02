@@ -22,7 +22,7 @@ export class AcaoModeloComponent implements OnInit {
     this.formCriaModelo = this.fb.group({
       nomeModelo: ['', [Validators.required]],
       tipoModelo: ['', [Validators.required]],
-      sltColecao: ['', [Validators.required]],
+      idColecao: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
       possuiBordado: ['', [Validators.required]],
       possuiEstampa: ['', [Validators.required]]
@@ -42,7 +42,7 @@ export class AcaoModeloComponent implements OnInit {
     this.modeloService.getModelosPorId(this.modeloID).subscribe((data) => {
       this.formCriaModelo.controls["nomeModelo"].setValue(data.nomeModelo);
       this.formCriaModelo.controls["tipoModelo"].setValue(data.tipoModelo);
-      this.formCriaModelo.controls["sltColecao"].setValue(data.sltColecao);
+      this.formCriaModelo.controls["idColecao"].setValue(data.idColecao);
       this.formCriaModelo.controls["responsavel"].setValue(data.responsavel);
       this.formCriaModelo.controls["possuiBordado"].setValue(data.possuiBordado);
       this.formCriaModelo.controls["possuiEstampa"].setValue(data.possuiEstampa);
