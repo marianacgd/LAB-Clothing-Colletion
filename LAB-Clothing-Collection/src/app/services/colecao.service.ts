@@ -18,11 +18,11 @@ export class ColecaoService {
   }
 
   getColecaoPorId(id: string): Observable<IColecao> {
-    return this.http.get<IColecao>( `${this.baseUrl}/${id}`)
+    return this.http.get<IColecao>(`${this.baseUrl}/${id}`)
   }
-  
-  getColecoesMaxValorTop5(){
-    return this.http.get<IColecao[]>( `${this.baseUrl}?_sort=orcamento&_order=desc&_limit=5`)
+
+  getColecoesMaxValorTop5() {
+    return this.http.get<IColecao[]>(`${this.baseUrl}?_sort=orcamento&_order=desc&_limit=5`)
   }
 
   postColecao(colecao: IColecao): Observable<IColecao> {
@@ -34,6 +34,6 @@ export class ColecaoService {
   }
 
   deleteColecao(id: number): Observable<IColecao> {
-    return this.http.delete<IColecao>( `${this.baseUrl}/${id}`)
+    return this.http.delete<IColecao>(`${this.baseUrl}/${id}`)
   }
 }
