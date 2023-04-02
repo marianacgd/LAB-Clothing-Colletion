@@ -1,14 +1,14 @@
 <div class="main">
     <div class="container">
         <div class="row align-items-center justify-content-start">
-          <div class="col-10 align-items-center mt-4">
-            <h4>Modelos</h4>
+            <div class="col-10 align-items-center mt-2">
+                <h4>Modelos</h4>
             </div>
-            <div class="col-2 align-items-center mt-4 ">
+            <div class="col-2 align-items-center mt-2 ">
                 <button class="btn btn-small btn-primary" type="submit" routerLink="/criarmodelo">Criar Modelo</button>
             </div>
         </div>
-        
+
         <div class="row align-items-center justify-content-center mt-5">
             <div class="col-12">
                 <app-card-listagem>
@@ -22,16 +22,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let modelo of modelos" (click)="editarModelo(modelo)">
+                            <tr *ngFor="let modelo of modelos | slice: (pagePagination-1) * pageSizePagination : pagePagination * pageSizePagination"
+                                (click)="editarModelo(modelo)">
                                 <td>{{modelo.id}}</td>
                                 <td>{{modelo.nomeModelo}}</td>
                                 <td>{{modelo.responsavel}}</td>
-                                <td>{{modelo.idColecao}}</td>
+                                <td>{{modelo.sltColecao}}</td>
                             </tr>
                         </tbody>
                     </table>
+                    <div slot="paginacao">
+                        <ngb-pagination [collectionSize]="modelos.length" [(page)]="pagePagination"
+                            [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
+                    </div>
                 </app-card-listagem>
             </div>
-          </div>
-      </div>
+        </div>
+    </div>
 </div>

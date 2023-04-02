@@ -12,21 +12,24 @@ export class ModelosComponent implements OnInit {
 
   modelos: IModelo[] = [];
 
-  constructor (private modeloService: ModeloService, private router: Router) {}
+  pagePagination = 1;
+  pageSizePagination = 7;
+
+  constructor(private modeloService: ModeloService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.listarModelos()
-    
+
   }
 
-  listarModelos(){
+  listarModelos() {
     this.modeloService.getModelos().subscribe((data) => {
       this.modelos = data;
-    })   
+    })
   }
 
-  editarModelo(modelo: IModelo){
+  editarModelo(modelo: IModelo) {
     this.router.navigate([`/criarmodelo/${modelo.id}`])
   }
 
