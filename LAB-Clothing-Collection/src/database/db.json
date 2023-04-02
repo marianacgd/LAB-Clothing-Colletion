@@ -77,79 +77,79 @@
     {
       "nomeModelo": "Camisetas Sport",
       "tipoModelo": "camisa",
-      "sltColecao": "Adidas",
       "responsavel": "Yan Esteves",
       "possuiBordado": "não",
       "possuiEstampa": "não",
+      "idColecao": 1,
       "id": 1
     },
     {
       "nomeModelo": "Shorts e Bermudas",
       "tipoModelo": "bermuda",
-      "sltColecao": "Renner",
       "responsavel": "Yan Esteves",
       "possuiBordado": "sim",
       "possuiEstampa": "não",
+      "idColecao": 2,
       "id": 2
     },
     {
+      "idColecao": 3,
       "nomeModelo": "Vestido Casual",
       "tipoModelo": "saia",
-      "sltColecao": "PatBO",
       "responsavel": "Yan Esteves",
       "possuiBordado": "não",
       "possuiEstampa": "sim",
       "id": 3
     },
     {
+      "idColecao": 1,
       "nomeModelo": "Calças Legging",
       "tipoModelo": "calca",
-      "sltColecao": "Adidas",
       "responsavel": "Yan Esteves",
       "possuiBordado": "sim",
       "possuiEstampa": "não",
       "id": 4
     },
     {
+      "idColecao": 5,
       "nomeModelo": "Tênis Nike Air Force",
       "tipoModelo": "calcados",
-      "sltColecao": "Nike Air Max",
       "responsavel": "Mariana Daruix",
       "possuiBordado": "sim",
       "possuiEstampa": "não",
       "id": 5
     },
     {
+      "idColecao": 6,
       "nomeModelo": "Vestido Leve e Divertido",
       "tipoModelo": "saia",
-      "sltColecao": "Zara",
       "responsavel": "Mariana Daruix",
       "possuiBordado": "não",
       "possuiEstampa": "sim",
       "id": 6
     },
     {
-      "nomeModelo": "Tênis Adidas Grand Court",
+      "nomeModelo": "Tênis esportivo masculino com recortes preto | Riachuelo",
       "tipoModelo": "calcados",
-      "sltColecao": "Adidas",
+      "idColecao": "8",
       "responsavel": "Mariana Daruix",
       "possuiBordado": "não",
-      "possuiEstampa": "sim",
+      "possuiEstampa": "não",
       "id": 7
     },
     {
+      "idColecao": 7,
       "nomeModelo": "Maiô Cavado",
       "tipoModelo": "biquini",
-      "sltColecao": "C&A ",
       "responsavel": "Mariana Daruix",
       "possuiBordado": "não",
       "possuiEstampa": "sim",
       "id": 8
     },
     {
+      "idColecao": 7,
       "nomeModelo": "Biquini Colorido",
       "tipoModelo": "biquini",
-      "sltColecao": "C&A ",
       "responsavel": "Mariana Daruix",
       "possuiBordado": "não",
       "possuiEstampa": "não",
