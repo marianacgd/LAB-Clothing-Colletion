@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IColecao } from 'src/app/interfaces/colecao';
-import { IModelo } from 'src/app/interfaces/modelo';
 import { ColecaoService } from 'src/app/services/colecao.service';
 import { ModeloService } from 'src/app/services/modelo.service';
 
@@ -15,17 +14,17 @@ export class ColecoesComponent implements OnInit {
   colecoes: IColecao[] = [];
   modelosPorColecao: string = '';
   pagePagination = 1
-  pageSizePagination = 3
+  pageSizePagination = 7
 
-  constructor(private colecaoService: ColecaoService, private router: Router, private modeloService: ModeloService){}
+  constructor(private colecaoService: ColecaoService, private router: Router, private modeloService: ModeloService) { }
 
   ngOnInit(): void {
 
     this.listarColecoes()
-        
+
   }
 
-  listarColecoes(){
+  listarColecoes() {
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
       this.colecoes.filter((length) => this.listarModelosPorColecao(length))
@@ -38,7 +37,7 @@ export class ColecoesComponent implements OnInit {
     });
   }
 
-  editarColecao(colecao: IColecao){
+  editarColecao(colecao: IColecao) {
     this.router.navigate([`/criarcolecao/${colecao.id}`])
   }
 }
