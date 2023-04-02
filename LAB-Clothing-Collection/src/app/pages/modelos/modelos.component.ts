@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IModelo } from 'src/app/interfaces/modelo';
+import { ColecaoService } from 'src/app/services/colecao.service';
 import { ModeloService } from 'src/app/services/modelo.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class ModelosComponent implements OnInit {
   pagePagination = 1;
   pageSizePagination = 7;
 
-  constructor(private modeloService: ModeloService, private router: Router) { }
+  constructor(private modeloService: ModeloService, private colecaoService: ColecaoService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -26,6 +27,9 @@ export class ModelosComponent implements OnInit {
   listarModelos() {
     this.modeloService.getModelos().subscribe((data) => {
       this.modelos = data;
+      this.modelos.map((value, _) => {
+        this.colecaoService.getColecaoPorId(value.idColecao.toString()).subscribe(dataColecao => value.sltColecao = dataColecao.nomeColecao )
+      })
     })
   }
 
