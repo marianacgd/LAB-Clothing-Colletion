@@ -1,6 +1,3 @@
-import { IModelo } from "./modelo";
-
-
 export interface IColecao {
     id: string;
     nomeColecao: string;
