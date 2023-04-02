@@ -171,39 +171,13 @@
       "id": 2
     },
     {
-      "nome": "jamil",
-      "empresa": "jamil",
-      "cnpj": "12.9889.932789",
-      "email": "jamilsd@gmail.com",
-      "password": "12345678",
-      "id": 3
-    },
-    {
-      "nome": "TESTE UM",
-      "empresa": "EMPRESA DOIS",
-      "cnpj": "12345678444444",
-      "email": "teste@uol.com.br",
+      "nome": "Mariana ",
+      "empresa": "Audaces",
+      "cnpj": "12345678000123",
+      "email": "mariana@teste.com",
       "password": "12345678",
       "confirmpassword": "12345678",
-      "id": 4
-    },
-    {
-      "nome": "Mariana",
-      "empresa": "Audaces",
-      "cnpj": "12345678901234",
-      "email": "mariana@audaces.com",
-      "password": "audaces1",
-      "confirmpassword": "audaces1",
-      "id": 5
-    },
-    {
-      "nome": "Mariana",
-      "empresa": "Audaces2",
-      "cnpj": "12345678901234",
-      "email": "mariana2@audaces.com",
-      "password": "audaces2",
-      "confirmpassword": "audaces2",
-      "id": 6
+      "id": 3
     }
   ]
 }
