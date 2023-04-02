@@ -1,16 +1,11 @@
 <div class="border-2" id="viewport">
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <app-menu></app-menu>
-    </div>
-    <!-- Content -->
-    <div id="content">
-        <app-header></app-header>
-      <div class="container-fluid custom-container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+  <div id="sidebar">
+    <app-menu></app-menu>
   </div>
-
-
-
+  <div id="content">
+    <app-header></app-header>
+  </div>
+  <div class="container-fluid p-3 custom-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
