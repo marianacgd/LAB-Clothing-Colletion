@@ -13,7 +13,9 @@ export class CriarContaComponent {
 
   formCadastro!: FormGroup;
 
-  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private router: Router) { }
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private router: Router) {
+
+  }
 
   ngOnInit(): void {
     this.formCadastro = this.fb.group({
@@ -29,11 +31,11 @@ export class CriarContaComponent {
       this.senhasIguaisValidator(
         this.formCadastro.get('password')!, this.formCadastro.get('confirmpassword')!
       )
-      )
+    )
 
   }
 
-  senhasIguaisValidator(controlName: AbstractControl, matchingControlName: AbstractControl) {
+  senhasIguaisValidator(controlName: AbstractControl, matchingControlName: AbstractControl): () => { match_error: string; } | null {
     return () => {
       if (controlName.value !== matchingControlName.value)
         return { match_error: 'Value does not match' };
