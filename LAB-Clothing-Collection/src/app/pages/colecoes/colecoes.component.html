@@ -35,11 +35,11 @@
                             </tr>
 
                         </tbody>
+                        <div slot="paginacao">
+                            <ngb-pagination [collectionSize]="colecoes.length" [(page)]="pagePagination"
+                                [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
+                        </div>
                     </table>
-                    <div slot="paginacao">
-                        <ngb-pagination [collectionSize]="colecoes.length" [(page)]="pagePagination"
-                            [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
-                    </div>
                 </app-card-listagem>
             </div>
         </div>
