@@ -39,7 +39,7 @@
     {
       "nomeColecao": "Nike Air Max",
       "responsavel": "Mariana Daruix",
-      "estacao": "Primavera/Verão",
+      "estacao": "Primavera",
       "marca": "Nike",
       "orcamento": 12000,
       "ano": 2024,
@@ -50,7 +50,7 @@
       "responsavel": "Mariana Daruix",
       "estacao": "Verão",
       "marca": "Zara",
-      "orcamento": 8000,
+      "orcamento": 10000,
       "ano": 2024,
       "id": 6
     },
@@ -71,6 +71,15 @@
       "orcamento": 5800,
       "ano": 2024,
       "id": 8
+    },
+    {
+      "nomeColecao": "Nova Coleção",
+      "responsavel": "Mariana",
+      "estacao": "Verão",
+      "marca": "Marca A",
+      "orcamento": 5000,
+      "ano": 2024,
+      "id": 9
     }
   ],
   "modelos": [
@@ -129,7 +138,7 @@
       "id": 6
     },
     {
-      "nomeModelo": "Tênis esportivo masculino com recortes preto | Riachuelo",
+      "nomeModelo": "Tênis esportivo masculino com recortes preto ",
       "tipoModelo": "calcados",
       "idColecao": "8",
       "responsavel": "Mariana Daruix",
