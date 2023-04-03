@@ -30,11 +30,18 @@
                                 <td>{{modelo.sltColecao}}</td>
                             </tr>
                         </tbody>
-                        <div slot="paginacao">
-                            <ngb-pagination [collectionSize]="modelos.length" [(page)]="pagePagination"
-                                [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
-                        </div>
                     </table>
+                    <div slot="paginacao" class="mt-5">
+                        <div class="row p-2">
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <ngb-pagination [collectionSize]="modelos.length" [(page)]="pagePagination"
+                                    [pageSize]="pageSizePagination" [boundaryLinks]="true"></ngb-pagination>
+                            </div>
+                        </div>
+                    </div>
+
                 </app-card-listagem>
             </div>
         </div>
