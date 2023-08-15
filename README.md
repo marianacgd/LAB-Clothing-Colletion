@@ -11,7 +11,8 @@ Você pode acessar o Trello do projeto em: https://trello.com/invite/b/PX8vlmZh/
 
 Você pode acessar o Vídeo de apresentação do projeto em: https://drive.google.com/file/d/1UFf51Eg1-2upVbuzVqRnnIqjCvDFgn5E/view?usp=drive_link
 
-**Usuário Padrão:**
+
+Usuário Padrão:
 
 email: admin@admin.com
 
@@ -40,9 +41,19 @@ Para execução dessa aplicação é necessário rodar a base de dados fake, con
 
 Através do comando `json-server db.json`.
 
-## Rotas Usuario
+## Rota Usuarios
 get all http://localhost:3000/usuarios
 
 get for id http://localhost:3000/usuarios/1
 
 get for email http://localhost:3000/usuarios?email=admin@admin.com
+
+## Rotas Coleçoes
+get all http://localhost:3000/colecoes
+
+get for id http://localhost:3000/colecoes/1
+
+## Rotas Modelos
+get all http://localhost:3000/modelos
+
+get for id http://localhost:3000/modelos/1
