@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
   listarColecoesMaiorOrcamento() {
     this.colecaoService.getColecoesMaxValorTop5().subscribe((data) => {
       this.colecoesMaior = data;
-      this.calcularOrcamentoMedio();
+      // this.calcularOrcamentoMedio();
       this.colecoesMaior.filter((length) => this.listarModelosPorColecao(length))
     })
   }
@@ -40,6 +40,7 @@ export class DashboardComponent implements OnInit {
   listarColecoes() {
     this.colecaoService.getColecoes().subscribe((data) => {
       this.colecoes = data;
+      this.calcularOrcamentoMedio();
     })
     this.numeroDeColecoes = this.colecoes.length.toString();
   }
@@ -58,11 +59,19 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  // calcularOrcamentoMedio() {
+  //   this.colecoes.forEach(f => {
+  //   this.orcamentoMedio += f.orcamento!;
+  // })
+  //   this.orcamentoMedio = this.orcamentoMedio / this.colecoes.length;
+  // }
+
   calcularOrcamentoMedio() {
     this.colecoesMaior.forEach(f => {
       this.orcamentoMedio += f.orcamento!;
     })
     this.orcamentoMedio = this.orcamentoMedio / 5;
+    console.log(this.numeroDeColecoes);
   }
 }
 
